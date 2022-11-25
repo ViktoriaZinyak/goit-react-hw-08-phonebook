@@ -3,7 +3,7 @@ import { addContact } from 'redux/operations';
 import { selectContacts } from 'redux/selectors';
 import { Form } from './ContactForm.styled';
 
-const ContactForm = () => {
+export const ContactForm = () => {
   const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
