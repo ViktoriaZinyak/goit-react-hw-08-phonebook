@@ -22,7 +22,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { contactsReducer } from './contactsSlice';
 import { filterReducer } from './filterSlice';
-import { authReducer } from './auth/slice';
+import { authReducer } from '../auth/slice';
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -46,7 +46,7 @@ export const store = configureStore({
     filter: filterReducer,
   },
   middleware,
-  devTools: process.env.NODE_ENV === 'development',
+  // devTools: process.env.NODE_ENV === 'development',
 });
 
 export const persistor = persistStore(store);

@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { Item } from './ContactList.styled';
-import { selectVisibleContacts } from 'redux/selectors';
+import { selectVisibleContacts } from 'redux/contacts/selectors';
 import { Contact } from '../Contact/Contact';
 
 export const ContactList = () => {
