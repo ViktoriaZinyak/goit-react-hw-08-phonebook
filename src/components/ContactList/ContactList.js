@@ -9,17 +9,19 @@ export const ContactList = () => {
   const contacts = useSelector(selectVisibleContacts);
 
   return (
-    <ul>
+    <div>
       {contacts.length > 0 ? (
-        contacts.map(contact => (
-          <Item key={contact.id}>
-            <Contact contact={contact} />
-          </Item>
-        ))
+        <ul>
+          {contacts.map(contact => (
+            <Item key={contact.id}>
+              <Contact contact={contact} />
+            </Item>
+          ))}
+        </ul>
       ) : (
         <div>No contacts </div>
       )}
-    </ul>
+    </div>
   );
 };
 

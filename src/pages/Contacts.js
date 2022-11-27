@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import ContactList from 'components/ContactList';
 import { fetchContacts } from 'redux/contacts/operations';
 import ContactForm from 'components/ContactForm';
+import Filter from 'components/Filter';
 import { selectIsLoading } from 'redux/contacts/selectors';
 
 export default function Contacts() {
@@ -21,6 +22,7 @@ export default function Contacts() {
       </Helmet>
       <ContactForm />
       <div>{isLoading && 'Request in progress...'}</div>
+      <Filter />
       <ContactList />
     </>
   );

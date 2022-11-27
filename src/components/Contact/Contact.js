@@ -9,7 +9,7 @@ export const Contact = ({ contact }) => {
   return (
     <div>
       <p>
-        {contact.name}: <span>{contact.phone}</span>
+        {contact.name}: <span>{contact.number}</span>
       </p>
       <button onClick={handleDelete}>Delete</button>
     </div>

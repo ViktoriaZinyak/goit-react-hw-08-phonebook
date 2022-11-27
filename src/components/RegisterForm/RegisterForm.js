@@ -13,6 +13,9 @@ export const RegisterForm = () => {
         name: form.elements.name.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
+        // name: 'vika grhrt',
+        // email: 'vikatrhr@ukr.net',
+        // password: '12345dg',
       })
     );
     form.reset();
