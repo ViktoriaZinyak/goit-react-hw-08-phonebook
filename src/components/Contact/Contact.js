@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'redux/contacts/operations';
+import { Wrap, ContactData } from './Contact.styled';
+import { Button } from 'components/RegisterForm/RegisterForm.styled';
 
 export const Contact = ({ contact }) => {
   const dispatch = useDispatch();
@@ -7,11 +9,11 @@ export const Contact = ({ contact }) => {
   const handleDelete = () => dispatch(deleteContact(contact.id));
 
   return (
-    <div>
-      <p>
+    <Wrap>
+      <ContactData>
         {contact.name}: <span>{contact.number}</span>
-      </p>
-      <button onClick={handleDelete}>Delete</button>
-    </div>
+      </ContactData>
+      <Button onClick={handleDelete}>Delete</Button>
+    </Wrap>
   );
 };

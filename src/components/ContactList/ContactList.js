@@ -1,7 +1,7 @@
 // import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-import { Item } from './ContactList.styled';
+import { Item, Wrap, List } from './ContactList.styled';
 import { selectVisibleContacts } from 'redux/contacts/selectors';
 import { Contact } from '../Contact/Contact';
 
@@ -11,15 +11,15 @@ export const ContactList = () => {
   return (
     <div>
       {contacts.length > 0 ? (
-        <ul>
+        <List>
           {contacts.map(contact => (
             <Item key={contact.id}>
               <Contact contact={contact} />
             </Item>
           ))}
-        </ul>
+        </List>
       ) : (
-        <div>No contacts </div>
+        <Wrap>No contacts </Wrap>
       )}
     </div>
   );
